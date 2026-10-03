@@ -1,0 +1,12 @@
+{
+  "name": "josebert-skills",
+  "owner": { "name": "josebert" },
+  "description": "Claude Code skills by josebert.",
+  "plugins": [
+    {
+      "name": "system-architect",
+      "source": "./plugins/system-architect",
+      "description": "Think and work as a systems architect: scope, trade-offs, requirements, data/process modeling, rollout strategy."
+    }
+  ]
+}

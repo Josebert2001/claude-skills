@@ -1,0 +1,6 @@
+{
+  "name": "system-architect",
+  "version": "1.0.0",
+  "description": "Think and work as a systems architect: scope, trade-offs, requirements, data/process modeling, rollout strategy.",
+  "author": { "name": "josebert" }
+}
