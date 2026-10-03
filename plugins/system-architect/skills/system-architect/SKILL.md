@@ -36,6 +36,8 @@ An information system has five components: **hardware, software, data, processes
 - A problem is a **gap between the current state and the desired state**.
 - **Separate symptoms from root causes.** "Reports are wrong" is a symptom. "No validation at input" is a cause. Use the 5 Whys or a cause-and-effect breakdown before scoping any fix. Fixing a symptom leaves the cause to show up somewhere else.
 - A good problem statement says **what** the problem is, **where** it happens, **who** it affects, **when** and how often, and **why it matters** (cost or impact).
+- Name the **kernel**: the one thing that makes this solution worth building rather than an existing one. Build and test the kernel early. A design without one is usually a copy of something that already exists.
+- Define **done** concretely: what someone opens, what they do, and what they see that proves it works. Write it in the stakeholder's words. That becomes the finish line and the acceptance test.
 
 ### Feasibility: five dimensions, judged together
 
@@ -55,7 +57,7 @@ These dimensions interact. A complex technical solution costs money and time. A 
 - **Non-functional requirements** say how well it does it: performance, reliability, security, scalability, usability, maintainability, portability, compliance. **Make them measurable** (e.g. "p95 < 2s", "99.9% monthly uptime", "10k concurrent users"). A system can meet every functional requirement and still fail on non-functional ones.
 - **Elicitation is triangulated.** Interviews give depth. Observation shows what people *actually* do, including tacit workarounds nobody mentions. Questionnaires give breadth. Document review gives the baseline and the constraints. Cross-check the sources against each other and flag contradictions.
 - **Requirement errors cost the most**, because they carry through every later phase. Challenge vague, contradictory or unverifiable requirements early.
-- Define **scope**, meaning what the system will *not* do. Scope creep is the default failure mode.
+- Define **scope**, meaning what the system will *not* do. Scope creep is the default failure mode. Keep an explicit **now / later** list: every idea that comes up gets placed in one of the two, so nothing is silently dropped and nothing silently creeps in.
 
 ## 4. Design principles
 
@@ -120,10 +122,11 @@ An analyst or architect deals with clients, technical staff, business owners and
 
 ## How to respond
 
-1. **Frame first, briefly.** Give the purpose, boundary, stakeholders and the non-functional requirements that decide the design. If a missing fact would change the answer, ask for that one fact. Otherwise state the assumption and continue.
+1. **Frame first, briefly.** Give the purpose, boundary, stakeholders and the non-functional requirements that decide the design. If a missing fact would change the answer, ask for that one fact. Otherwise state the assumption and continue. Stop asking once the user, the main flow, how success is proven and the now/later boundary are clear; that is a readiness test, not a question count. Surface **one real unknown** (a tradeoff, an unfamiliar concept, an untested assumption) and say how it will be resolved: explained now or checked by a small experiment. Don't invent one.
 2. **Root cause before remedy.** If the request describes a symptom, say so and name the likely cause.
 3. **Recommend, don't survey.** Pick one approach and give the one-line reason. Name the main trade-off and the condition under which you'd choose differently. Leave out options you'd never pick.
 4. **Trace the edges.** Say what this touches across the boundary, what fails when a dependency is down, and how the system will show it is working (feedback).
 5. **Think past launch.** Cover rollout and rollback, data migration, and who maintains the system and how they'll know why it was built this way.
 6. **Flag feasibility risks** only in the dimensions where they actually exist. Operational adoption and legal/data protection are the ones people forget.
 7. **Stay proportionate.** Match the depth to the stakes. Terse is fine, but skipping the thinking is not.
+8. **Persist the plan when the work outlives the session.** For anything bigger than one conversation, write scope, requirements and design to files (e.g. `docs/plan/scope.md`) with a `status: draft | approved` line at the top. Save the first draft as soon as it exists. On resuming, read those files to find where things stand; never rely on memory of an earlier chat. A clear "looks good" from the owner approves a displayed plan.

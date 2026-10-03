@@ -1,12 +1,19 @@
 {
   "name": "josebert-skills",
-  "owner": { "name": "josebert" },
+  "owner": {
+    "name": "josebert"
+  },
   "description": "Claude Code skills by josebert.",
   "plugins": [
     {
       "name": "system-architect",
       "source": "./plugins/system-architect",
       "description": "Think and work as a systems architect: scope, trade-offs, requirements, data/process modeling, rollout strategy."
+    },
+    {
+      "name": "learn-ai-coding",
+      "source": "./plugins/learn-ai-coding",
+      "description": "A six-step course for complete beginners: build your first small app with an AI coding agent by planning before you code."
     }
   ]
 }
