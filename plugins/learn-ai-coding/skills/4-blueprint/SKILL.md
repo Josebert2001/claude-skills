@@ -45,7 +45,7 @@ Take the main journey from `plan.md` and say, in plain words, what happens in wh
 
 ### 5. Slice the build
 
-Split the work into **slices**: small steps, each ending in something they can run and see. The first slice is the bare skeleton showing on screen. The special thing from `idea.md` comes early. Each slice says how to check it works.
+Split the work into **slices**: small steps, each ending in something they can run and see. The first slice is the bare skeleton showing on screen. The special thing from `idea.md` comes early. Each slice says how to check it works. The check must be something the learner can do without admin rights: if behaviour depends on the date or time, plan a simple test switch (for example opening the page with `?today=2026-10-05`) rather than changing the computer's clock.
 
 ## Save
 

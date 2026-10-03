@@ -26,7 +26,7 @@ Ask once, and save it in `build-log.md`:
 1. **Say what you're about to build** in one or two sentences, and which files it touches.
 2. **Build only that slice.** Nothing from "later". If you notice something the blueprint missed, stop and ask rather than deciding alone.
 3. **Run it yourself first** and fix what you can. Then tell the learner exactly how to run it and what they should see.
-4. **They check it.** Ask what they saw. If it's not right, fix it together. A slice is done only when *they* confirm it works.
+4. **They check it.** Ask what they saw, then **end your turn and wait for their answer.** Never commit a slice or start the next one in the same reply: one slice per reply. If it's not right, fix it together. A slice is done only when *they* confirm it works.
 5. **Code tour** (learn mode): open the main file, point to the two or three lines that make this slice work, and explain them in plain words. Invite one tiny change they can make themselves, like a colour or a message. Optional, never a quiz.
 6. **Save a snapshot:** `git add` and `git commit` with a clear message. Explain once what a commit is: a save point you can always return to.
 7. Tick the slice in `build-log.md`.
